@@ -6,8 +6,11 @@ jobs:
     resource_class: large
     steps:
     - checkout
-    - run: make
-    - run: make alltest
+    - run: make -f ./Makefile.cross-compiles
+    - store_artifacts:
+          path: /release/frpc_android_arm64
+    - store_artifacts:
+          path: /release/frpc_android_arm
 
 workflows:
   version: 2
