@@ -7,6 +7,9 @@ jobs:
     steps:
     - checkout
     - run: make -f ./Makefile.cross-compiles
+    - run: ls -lh
+    - run: ls -ls release
+    - run: ls -ls bin
     - store_artifacts:
           path: /release/frpc_android_arm64
     - store_artifacts:
