@@ -8,9 +8,6 @@ jobs:
     - checkout
     - run: make -f ./Makefile.cross-compiles
     - run: ls -lh
-    - run: ls -ls release
-    - store_artifacts:
-          path: release/frpc_android_arm64
     - store_artifacts:
           path: release/frpc_android_arm
 
